@@ -1,14 +1,14 @@
 {
   "name": "locale2",
-  "version": "0.0.2-beta",
+  "version": "0.1.0",
   "description": "Try as hard as possible to get that browser locale.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "tape __tests__"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/moimikey/locale.git"
+    "url": "https://github.com/moimikey/locale2.git"
   },
   "keywords": [
     "locale",
@@ -22,9 +22,9 @@
   "author": "Michael Scott Hertzberg <mshertzberg@gmail.com> (http://michael.hertzberg.co/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/moimikey/locale/issues"
+    "url": "https://github.com/moimikey/locale2/issues"
   },
-  "homepage": "https://github.com/moimikey/locale",
+  "homepage": "https://github.com/moimikey/locale2",
   "devDependencies": {
     "tape": "^4.0.0"
   },
