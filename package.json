@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/moimikey/locale2",
   "devDependencies": {
-    "tape": "4.2.1"
+    "tape": "4.2.2"
   },
   "testling": {
     "files": "__tests__/*.js",
