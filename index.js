@@ -1,2 +1,1 @@
-var Locale = require('./src');
-module.exports = Locale;
+module.exports = require('./src').locale2
