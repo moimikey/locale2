@@ -1,6 +1,6 @@
 {
   "name": "locale2",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Try as hard as possible to get that browser locale.",
   "main": "index.js",
   "scripts": {
