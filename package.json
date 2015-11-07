@@ -28,7 +28,7 @@
   "homepage": "https://github.com/moimikey/locale2",
   "devDependencies": {
     "faucet": "*",
-    "rewire": "*",
+    "rewire": "2.4.0",
     "tape": "*"
   },
   "optionalDependencies": {
