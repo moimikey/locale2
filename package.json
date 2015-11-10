@@ -36,6 +36,6 @@
     "browserstack-tape-reporter": "*",
     "rewire-webpack": "*",
     "tape-catch": "*",
-    "webpack": "*"
+    "webpack": "1.12.4"
   }
 }
