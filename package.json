@@ -1,11 +1,12 @@
 {
   "name": "locale2",
   "version": "1.0.0",
-  "description": "Try as hard as possible to get that browser locale.",
+  "description": "Detect the client's Language-Region locale (en-US) and return an RFC 5646 compliant, BCP47 language tag, in node or the browser. Browserify and Webpack friendly!",
   "main": "index.js",
   "scripts": {
     "test": "tape ./test.js | faucet",
-    "test-bs": "./test-bs.sh"
+    "test-bs": "./test-bs.sh",
+    "test-bs-local": "open http://localhost:8080/webpack-dev-server/test-bs.html && webpack-dev-server --config ./webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,22 @@
     "language",
     "l10n",
     "i18n",
-    "browser"
+    "browser",
+    "lcid",
+    "lang",
+    "local",
+    "enus",
+    "en-US",
+    "en-GB",
+    "engb",
+    "en",
+    "eng",
+    "5646",
+    "rfc",
+    "region",
+    "rfc5646",
+    "bcp47",
+    "bcp"
   ],
   "author": "Michael Scott Hertzberg <mshertzberg@gmail.com> (http://hertzber.gs/)",
   "license": "MIT",
@@ -27,15 +43,17 @@
   },
   "homepage": "https://github.com/moimikey/locale2",
   "devDependencies": {
-    "faucet": "*",
+    "faucet": "0.0.1",
     "rewire": "2.4.0",
-    "tape": "*"
+    "tape": "4.2.2"
   },
   "optionalDependencies": {
-    "browserstack-runner": "*",
-    "browserstack-tape-reporter": "*",
-    "rewire-webpack": "*",
-    "tape-catch": "*",
-    "webpack": "*"
+    "browserstack-runner": "0.3.8",
+    "browserstack-tape-reporter": "1.0.2",
+    "enhanced-resolve": "0.9.1",
+    "rewire-webpack": "1.0.0",
+    "tape-catch": "1.0.4",
+    "webpack": "1.11.0",
+    "webpack-dev-server": "1.11.0"
   }
 }

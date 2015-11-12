@@ -1,0 +1,82 @@
+{
+  "username": "moimikey",
+  "test_path": "test-bs.html",
+  "browsers": [
+  {
+   "browser" : "ie",
+   "browser_version" : "8.0",
+   "os" : "windows",
+   "os_version" : "7"
+  }
+,
+  {
+   "browser" : "ie",
+   "browser_version" : "9.0",
+   "os" : "windows",
+   "os_version" : "7"
+  }
+,
+  {
+   "browser" : "ie",
+   "browser_version" : "10.0",
+   "os" : "windows",
+   "os_version" : "7"
+  }
+,
+  {
+   "browser" : "ie",
+   "browser_version" : "11.0",
+   "os" : "windows",
+   "os_version" : "7"
+  }
+,
+  {
+   "browser" : "ie",
+   "browser_version" : "10.0",
+   "os" : "windows",
+   "os_version" : "8"
+  }
+,
+  {
+   "browser" : "edge",
+   "browser_version" : "12.0",
+   "os" : "windows",
+   "os_version" : "10"
+  }
+,
+  {
+   "browser" : "firefox",
+   "browser_version" : "41.0",
+   "os" : "windows",
+   "os_version" : "8.1"
+  }
+,
+  {
+   "browser" : "safari",
+   "browser_version" : "5.1",
+   "os" : "windows",
+   "os_version" : "8.1"
+  }
+,
+  {
+   "browser" : "chrome",
+   "browser_version" : "46.0",
+   "os" : "windows",
+   "os_version" : "8.1"
+  }
+,
+  {
+   "browser" : "safari",
+   "browser_version" : "8.0",
+   "os" : "os x",
+   "os_version" : "yosemite"
+  }
+,
+  {
+   "browser" : "firefox",
+   "browser_version" : "41.0",
+   "os" : "os x",
+   "os_version" : "yosemite"
+  }
+  ]
+}

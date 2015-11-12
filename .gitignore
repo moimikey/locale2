@@ -1,5 +1,3 @@
 *.log
+*.map
 node_modules
-test-bs*
-browserstack*
-webpack*
