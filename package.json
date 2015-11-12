@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "tape ./test.js | faucet",
-    "test-bs": "./test-bs.sh",
+    "build-webpack": "webpack",
+    "test-bs": "browserstack-runner --verbose",
     "test-bs-local": "open http://localhost:8080/webpack-dev-server/test-bs.html && webpack-dev-server --config ./webpack.config.js"
   },
   "repository": {

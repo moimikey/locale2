@@ -1,1 +1,0 @@
-webpack && browserstack-runner --verbose
