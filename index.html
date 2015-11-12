@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Locale2 by moimikey</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Locale2</h1>
+        <p>Try as hard as possible to get that browser locale like en-US</p>
+
+        <p class="view"><a href="https://github.com/moimikey/locale2">View the Project on GitHub <small>moimikey/locale2</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/moimikey/locale2/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/moimikey/locale2/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/moimikey/locale2">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="locale2" class="anchor" href="#locale2" aria-hidden="true"><span class="octicon octicon-link"></span></a>locale2</h1>
+
+<p><a href="https://www.npmjs.com/package/locale2"><img src="https://img.shields.io/npm/v/locale2.svg" alt="Version"></a> <a href="https://github.com/moimikey/locale2/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/locale2.svg" alt="License"></a> <a href="https://www.npmjs.com/package/locale2"><img src="https://img.shields.io/npm/dm/locale2.svg" alt="Downloads"></a> <a href="https://david-dm.org/moimikey/locale2"><img src="https://img.shields.io/david/moimikey/locale2.svg" alt="Deps"></a> <a href="https://david-dm.org/moimikey/locale2"><img src="https://img.shields.io/david/dev/moimikey/locale2.svg" alt="DevDeps"></a></p>
+
+<p>Try as hard as possible to get that browser locale like en-US.</p>
+
+<h2>
+<a id="notes" class="anchor" href="#notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes</h2>
+
+<p>I intentionally made the code look like an OCD's dream because
+code is poetry so I got all artsy with it. I also smoked <strong>A LOT</strong>.</p>
+
+<h2>
+<a id="contribute" class="anchor" href="#contribute" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contribute</h2>
+
+<p>I'm currently trying to properly hookup BrowserStack. If anyone
+has some tips on getting the following to play together, I'll
+add you as a collaborator!</p>
+
+<ul>
+<li>webpack</li>
+<li>rewire</li>
+<li>BrowserStack</li>
+</ul>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<pre><code>npm install --no-optional
+npm test
+</code></pre>
+
+<pre><code>import locale2 from 'locale2'
+&gt; locale2
+en-US
+&gt;
+</code></pre>
+
+<h3>
+<a id="it-also-pairs-well-with-iso3166-1" class="anchor" href="#it-also-pairs-well-with-iso3166-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>It also pairs well with iso3166-1!</h3>
+
+<pre><code>var iso3166 = require('iso3166-1');
+var locale2 = require('locale2');
+&gt; iso3166.from(locale2).to3()
+USA
+&gt;
+</code></pre>
+
+<h2>
+<a id="thanks" class="anchor" href="#thanks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thanks</h2>
+
+<p><a href="http://browserstack.com"><img src="https://raw.githubusercontent.com/moimikey/locale2/master/assets/bs.png" alt="BrowserStack"></a></p>
+
+<h2>
+<a id="try-it" class="anchor" href="#try-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>Try it!</h2>
+
+<p><a href="http://requirebin.com/?gist=998c64b611a2cd6753b4"><img src="http://requirebin.com/badge.png" alt="view on requirebin"></a></p>
+
+<p>If we can't detect your locale, then we'll give you your money back! it's win-win!</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/moimikey">moimikey</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
