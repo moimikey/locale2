@@ -19,8 +19,7 @@ function getLocale(locale) {
                          (global.navigator.userAgent && global.navigator.userAgent.match(/;.(\w+\-\w+)/i)[1]))
 
   || process.env && (locale = (process.env.LANG
-                           ||  process.env.LANGUAGE
-                           ||  process.env.LC_TYPE))
+                           ||  process.env.LANGUAGE))
                  && locale.replace(/[.:].*/, '')
 }
 
