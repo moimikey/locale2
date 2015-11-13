@@ -43,7 +43,7 @@ test('locale2 can detect from...', function (subtest) {
     lib.__with__({
       global: {
         navigator: {
-          language: 'en-BB'
+          language: 'en-bb'
        }
      }
     })(function() {
@@ -71,7 +71,7 @@ test('locale2 can detect from...', function (subtest) {
     lib.__with__({
       global: {
         navigator: {
-          languages: ['en-DD', 'en']
+          languages: ['en-dd', 'en']
         }
       }
     })(function () {
@@ -99,7 +99,7 @@ test('locale2 can detect from...', function (subtest) {
     lib.__with__({
       process: {
         env: {
-          LANGUAGE: 'en_FF.UTF-8',
+          LANGUAGE: 'en_ff.UTF-8',
         }
       }
     })(function () {

@@ -1,5 +1,7 @@
 "use strict"
 
+var utils = require('./utils')
+
 function getLocale(locale) {
   if (locale) {
     return locale
@@ -24,7 +26,7 @@ function getLocale(locale) {
 }
 
 var locale2 = function(locale) {
-  return getLocale(locale)
+  return utils.formatLocale(getLocale(locale))
 }
 
 exports.locale2 = locale2
