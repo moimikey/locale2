@@ -1,5 +1,3 @@
-"use strict"
-
 var test    = require('tape')
 var lib     = require('./src')
 var locale2 = lib.locale2

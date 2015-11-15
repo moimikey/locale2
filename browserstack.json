@@ -5,78 +5,50 @@
   {
    "browser" : "ie",
    "browser_version" : "9.0",
-   "os" : "windows",
+   "os" : "Windows",
    "os_version" : "7"
   }
 ,
   {
    "browser" : "ie",
    "browser_version" : "10.0",
-   "os" : "windows",
+   "os" : "Windows",
    "os_version" : "7"
-  }
-,
-  {
-   "browser" : "ie",
-   "browser_version" : "11.0",
-   "os" : "windows",
-   "os_version" : "7"
-  }
-,
-  {
-   "browser" : "ie",
-   "browser_version" : "10.0",
-   "os" : "windows",
-   "os_version" : "8"
-  }
-,
-  {
-   "browser" : "edge",
-   "browser_version" : "12.0",
-   "os" : "windows",
-   "os_version" : "10"
-  }
-,
-  {
-   "browser" : "firefox",
-   "browser_version" : "latest",
-   "os" : "windows",
-   "os_version" : "8.1"
-  }
-,
-  {
-   "browser" : "safari",
-   "browser_version" : "5.1",
-   "os" : "windows",
-   "os_version" : "8.1"
-  }
-,
-  {
-   "browser" : "chrome",
-   "browser_version" : "latest",
-   "os" : "windows",
-   "os_version" : "8.1"
   }
 ,
   {
    "browser" : "safari",
    "browser_version" : "latest",
-   "os" : "os x",
-   "os_version" : "yosemite"
+   "os" : "OS X",
+   "os_version" : "El Capitan"
+  }
+,
+  {
+   "browser" : "safari",
+   "browser_version" : "latest",
+   "os" : "OS X",
+   "os_version" : "Yosemite"
   }
 ,
   {
    "browser" : "firefox",
    "browser_version" : "latest",
-   "os" : "os x",
-   "os_version" : "yosemite"
+   "os" : "OS X",
+   "os_version" : "El Capitan"
   }
 ,
   {
    "browser" : "opera",
    "browser_version" : "latest",
-   "os" : "os x",
-   "os_version" : "yosemite"
+   "os" : "OS X",
+   "os_version" : "Yosemite"
+  }
+,
+  {
+   "browser" : "chrome",
+   "browser_version" : "latest",
+   "os" : "OS X",
+   "os_version" : "Yosemite"
   }
   ]
 }
