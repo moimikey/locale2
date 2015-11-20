@@ -54,7 +54,7 @@
     "enhanced-resolve": "0.9.1",
     "rewire-webpack": "1.0.1",
     "tape-catch": "1.0.4",
-    "webpack": "1.12.6",
+    "webpack": "1.12.7",
     "webpack-dev-server": "1.11.0"
   }
 }
