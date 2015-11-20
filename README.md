@@ -10,22 +10,24 @@ In 2009, IETF published **RFC 5646**, _"Tags for Identifying Languages,"_ in whi
 A **language tag** is composed from a sequence of one or more _"subtags"_, each of which refines or narrows the range of language identified by the overall tag.  Subtags, in turn, are a sequence of alphanumeric characters (letters and digits), distinguished and separated from other subtags in a tag by a hyphen ("-", [Unicode] U+002D).
 
 > en-US
+
 > br-PT
+
 > fil-PH
 
-* [RFC 5646](https://tools.ietf.org/html/rfc5646)
-* [BCP 47](https://tools.ietf.org/html/bcp47)
+1. [RFC 5646](https://tools.ietf.org/html/rfc5646)
+1. [BCP 47](https://tools.ietf.org/html/bcp47)
 
 # Unit tested and browser tested!
 [![BrowserStack][browserstack-logo]][browserstack-url]
-* ✓ IE 8
-* ✓ IE 9
-* ✓ IE 10
-* ✓ IE 12 (Edge)
-* ✓ Safari 5.1+
-* ✓ Opera 33+
-* ✓ Firefox
-* ✓ Chrome
+- ✓ IE 8
+- ✓ IE 9
+- ✓ IE 10
+- ✓ IE 12 (Edge)
+- ✓ Safari 5.1+
+- ✓ Opera (Presto & Webkit)
+- ✓ Firefox
+- ✓ Chrome
 
 # It works in node too!
 ```sh
@@ -51,13 +53,13 @@ npm install --no-optional
 npm test
 ```
 
-# Browser testing (private)
+# Browser testing (currently private)
 ```sh
 npm run test-bs
 ```
 
 # Try it!
-[![view on requirebin](http://requirebin.com/badge.png)](http://requirebin.com/?gist=998c64b611a2cd6753b4)
+[![view on requirebin](http://requirebin.com/badge.png)](http://requirebin.com/?gist=8394988344ff2514df5e)
 
 # Guaranteed!
 If we can't detect your locale, then we'll give you your money back! it's win-win!
