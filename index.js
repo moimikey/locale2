@@ -1,1 +1,2 @@
-module.exports = require('./src').locale2
+"use strict"
+module.exports = require('./src').locale2()

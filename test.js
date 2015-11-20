@@ -3,7 +3,13 @@ var rewire   = require('rewire')
 var lib      = rewire('./src')
 var locale2  = lib.locale2
 
-test('locale2 is a string', function (t) {
+test('locale2 is', function(t) {
+  t.plan(1)
+  t.ok(locale2())
+  t.end()
+})
+
+test('locale2 returns a locale string', function(t) {
   t.plan(1)
   lib.__with__({
     global: {
@@ -17,14 +23,14 @@ test('locale2 is a string', function (t) {
   })
 })
 
-test('locale2 can force a locale', function (t) {
+test('locale2 returns a forced locale', function(t) {
   t.plan(1)
   t.equal(locale2('en-11'), 'en-11')
   t.end()
 })
 
-test('locale2 can detect from...', function (subtest) {
-  subtest.test('...clientInformation.language', function (t) {
+test('locale2 resolved...', function(T) {
+  T.test('...clientInformation.language', function(t) {
     t.plan(1)
     lib.__with__({
       global: {
@@ -38,7 +44,7 @@ test('locale2 can detect from...', function (subtest) {
     })
   })
 
-  subtest.test('...navigator.language', function (t) {
+  T.test('...navigator.language', function(t) {
     t.plan(1)
     lib.__with__({
       global: {
@@ -52,7 +58,7 @@ test('locale2 can detect from...', function (subtest) {
     })
   })
 
-  subtest.test('...navigator.userLanguage', function (t) {
+  T.test('...navigator.userLanguage', function(t) {
     t.plan(1)
     lib.__with__({
       global: {
@@ -66,7 +72,7 @@ test('locale2 can detect from...', function (subtest) {
     })
   })
 
-  subtest.test('...navigator.languages', function (t) {
+  T.test('...navigator.languages', function(t) {
     t.plan(1)
     lib.__with__({
       global: {
@@ -80,7 +86,7 @@ test('locale2 can detect from...', function (subtest) {
     })
   })
 
-  subtest.test('...navigator.userAgent', function (t) {
+  T.test('...navigator.userAgent', function(t) {
     t.plan(1)
     lib.__with__({
       global: {
@@ -94,12 +100,13 @@ test('locale2 can detect from...', function (subtest) {
     })
   })
 
-  subtest.skip('...process.env.LANG', function (t) {
+  T.test('...process.env.LANG', function(t) {
     t.plan(1)
     lib.__with__({
+      global: {},
       process: {
         env: {
-          LANGUAGE: 'en_ff.UTF-8',
+          LANG: 'en_ff.UTF-8'
         }
       }
     })(function () {
@@ -108,22 +115,57 @@ test('locale2 can detect from...', function (subtest) {
     })
   })
 
-  subtest.test('...Intl.DateTimeFormat', function (t) {
+  T.test('...process.env.LANGUAGE', function(t) {
+    t.plan(1)
+    lib.__with__({
+      global: {},
+      process: {
+        env: {
+          LANGUAGE: 'en_GG.UTF-8'
+        }
+      }
+    })(function () {
+      t.equal(locale2(), 'en-GG')
+      t.end()
+    })
+  })
+
+  T.test('...Intl.DateTimeFormat', function(t) {
     t.plan(1)
     lib.__with__({
       global: {
         Intl: {
-          DateTimeFormat: function () {
+          DateTimeFormat: function() {
             return {
               resolved: {
-                locale: 'en-GG'
+                locale: 'en-hh'
               }
             }
           }
         }
       }
     })(function () {
-      t.equal(locale2(), 'en-GG')
+      t.equal(locale2(), 'en-HH')
+      t.end()
+    })
+  })
+
+  T.test('...chrome.app', function(t) {
+    t.plan(1)
+    lib.__with__({
+      global: {
+        chrome: {
+          app: {
+            getDetails: function() {
+              return {
+                current_locale: 'en-II'
+              }
+            }
+          }
+        }
+      }
+    })(function () {
+      t.equal(locale2(), 'en-II')
       t.end()
     })
   })

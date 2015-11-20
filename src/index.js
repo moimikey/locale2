@@ -1,32 +1,36 @@
 "use strict"
 
-var utils = require('./utils')
+var formatLocale = require('./utils').formatLocale
 
 function getLocale(locale) {
-  if (locale) {
-    return locale
-  }
+  if (locale) return locale
 
   if (global.Intl && typeof global.Intl.DateTimeFormat === 'function') {
     return global.Intl.DateTimeFormat().resolved.locale
   }
 
-  return ((global.clientInformation
-        || global.navigator
-        || Object.create(null)
-  ).language)
+  if (global.chrome && typeof global.chrome.app.getDetails === 'function') {
+    return global.chrome.app.getDetails().current_locale
+  }
 
-  || global.navigator && (global.navigator.userLanguage
-                      || (global.navigator.languages && global.navigator.languages[0]) ||
-                         (global.navigator.userAgent && global.navigator.userAgent.match(/;.(\w+\-\w+)/i)[1]))
+  locale = (global.clientInformation || global.navigator || Object.create(null)).language ||
+           (global.navigator &&
+             (global.navigator.userLanguage ||
+             (global.navigator.languages && global.navigator.languages[0]) ||
+             (global.navigator.userAgent && global.navigator.userAgent.match(/;.(\w+\-\w+)/i)[1])))
 
-  || process.env && (locale = (process.env.LANG
-                           ||  process.env.LANGUAGE))
-                 && locale.replace(/[.:].*/, '')
+  if (!locale && ['LANG', 'LANGUAGE'].some(Object.hasOwnProperty, process.env)) {
+    return (process.env.LANG ||
+            process.env.LANGUAGE ||
+            Object.create(null)).replace(/[.:].*/, '')
+                                .replace('_', '-')
+  }
+
+  return locale
 }
 
 var locale2 = function(locale) {
-  return utils.formatLocale(getLocale(locale))
+  return formatLocale(getLocale(locale))
 }
 
 exports.locale2 = locale2

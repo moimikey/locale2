@@ -1,37 +1,31 @@
 # locale2
 [![Version][npm-version-image]][npm-version-url] [![License][npm-license-image]][npm-license-url] [![Downloads][npm-downloads-image]][npm-downloads-url] [![Deps][npm-deps-image]][npm-deps-url] [![DevDeps][npm-devdeps-image]][npm-devdeps-url] [![Build Status][drone-image]][drone-url]
 
-Detect the client's Language-Region locale (en-US) and return an RFC 5646 compliant, BCP47 language tag, in node or the browser. Browserify and Webpack friendly!
+Try as hard as possible to detect the client's language tag ("locale") in node or the browser. Browserify and Webpack friendly!
 
-# Learn More
+# Language Tags, Locale, RFC 5646 and BCP 47
 
-> In 2009, IETF published RFC 5646, "Tags for Identifying Languages," in which
-"...describes the structure, content, construction, and semantics of language tags
-for use in cases where it is desirable to indicate the language used in an
-information object."
+In 2009, IETF published **RFC 5646**, _"Tags for Identifying Languages,"_ in which "...describes the structure, content, construction, and semantics of **language tags** for use in cases where it is desirable to indicate the language used in an information object."
 
-- [RFC 5646: Tags for Identifying Languages](https://tools.ietf.org/html/rfc5646)
+A **language tag** is composed from a sequence of one or more _"subtags"_, each of which refines or narrows the range of language identified by the overall tag.  Subtags, in turn, are a sequence of alphanumeric characters (letters and digits), distinguished and separated from other subtags in a tag by a hyphen ("-", [Unicode] U+002D).
 
+> en-US
+> br-PT
+> fil-PH
 
+* [RFC 5646](https://tools.ietf.org/html/rfc5646)
+* [BCP 47](https://tools.ietf.org/html/bcp47)
 
 # Unit tested and browser tested!
 [![BrowserStack][browserstack-logo]][browserstack-url]
-> ✓ Windows 7, IE 8
-> ✓ Windows 7, IE 9
-> ✓ Windows 7, IE 10
-> ✓ Windows 7, IE 11
-> ✓ Windows 8, IE 10
-> ✓ Windows 8.1, IE 11
-> ✓ Windows 8.1, Firefox 41
-> ✓ Windows 8.1, Safari 5.1
-> ✓ Windows 8.1, Chrome 46
-> ✓ Windows 10, Edge 12
-> ✓ OS X Yosemite, Safari 8
-> ✓ OS X Yosemite, Firefox 41
-> ✓ OS X Yosemite, Chrome 46
-> ### **OPERA**
-> Unfortunately, there is an inconsistency with Opera, as it returns
-a "**simple language subtag**" such as: **en, fr, de**; excluding the region.
+* ✓ IE 8
+* ✓ IE 9
+* ✓ IE 10
+* ✓ IE 12 (Edge)
+* ✓ Safari 5.1+
+* ✓ Opera 33+
+* ✓ Firefox
+* ✓ Chrome
 
 # It works in node too!
 ```sh
