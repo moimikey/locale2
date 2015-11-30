@@ -29,6 +29,12 @@ test('locale2 returns a forced locale', function(t) {
   t.end()
 })
 
+test('locale2 can parse a complex locale', function(t) {
+  t.plan(1)
+  t.equal(locale2('en-US-u-VA-posix'), 'en-US')
+  t.end()
+})
+
 test('locale2 resolved...', function(T) {
   T.test('...clientInformation.language', function(t) {
     t.plan(1)
