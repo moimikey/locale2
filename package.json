@@ -46,7 +46,7 @@
   "devDependencies": {
     "browserstack-runner": "0.4.1",
     "browserstack-tape-reporter": "1.0.2",
-    "enhanced-resolve": "2.1.0",
+    "enhanced-resolve": "2.2.0",
     "faucet": "0.0.1",
     "rewire": "2.5.1",
     "rewire-webpack": "1.0.1",
