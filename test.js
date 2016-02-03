@@ -143,8 +143,10 @@ test('locale2 resolved...', function(T) {
         Intl: {
           DateTimeFormat: function() {
             return {
-              resolved: {
-                locale: 'en-hh'
+              resolvedOptions: function() {
+                return {
+                  locale: 'en-hh'
+                }
               }
             }
           }
