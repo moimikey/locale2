@@ -50,7 +50,7 @@
     "faucet": "0.0.1",
     "rewire": "2.5.1",
     "rewire-webpack": "1.0.1",
-    "tape": "4.4.0",
+    "tape": "4.5.0",
     "tape-catch": "1.0.4",
     "webpack": "1.12.14",
     "webpack-dev-server": "1.14.1"
