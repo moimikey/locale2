@@ -1,4 +1,4 @@
-# locale2 [![Build Status][drone-image]][drone-url]
+# locale2 [![Build Status][travis-image]][travis-url]
 [![Version][npm-version-image]][npm-version-url] [![License][npm-license-image]][npm-license-url] [![Downloads][npm-downloads-image]][npm-downloads-url] [![Deps][npm-deps-image]][npm-deps-url] [![DevDeps][npm-devdeps-image]][npm-devdeps-url]
 
 Try as hard as possible to detect the client's language tag ("locale") in node or the browser. Browserify and Webpack friendly!
@@ -76,5 +76,5 @@ If we can't detect your locale, then we'll give you your money back! it's win-wi
 [npm-deps-image]: https://img.shields.io/david/moimikey/locale2.svg
 [npm-devdeps-url]: https://david-dm.org/moimikey/locale2
 [npm-devdeps-image]: https://img.shields.io/david/dev/moimikey/locale2.svg
-[drone-url]: https://drone.io/github.com/moimikey/locale2/latest
-[drone-image]: https://drone.io/github.com/moimikey/locale2/status.png
+[travis-url]: https://travis-ci.org/moimikey/locale2.svg?branch=master
+[travis-image]: https://travis-ci.org/moimikey/locale2
