@@ -76,5 +76,5 @@ If we can't detect your locale, then we'll give you your money back! it's win-wi
 [npm-deps-image]: https://img.shields.io/david/moimikey/locale2.svg
 [npm-devdeps-url]: https://david-dm.org/moimikey/locale2
 [npm-devdeps-image]: https://img.shields.io/david/dev/moimikey/locale2.svg
-[travis-url]: https://travis-ci.org/moimikey/locale2.svg?branch=master
-[travis-image]: https://travis-ci.org/moimikey/locale2
+[travis-url]: https://travis-ci.org/moimikey/locale2
+[travis-image]: https://travis-ci.org/moimikey/locale2.svg?branch=master
