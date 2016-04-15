@@ -52,7 +52,7 @@
     "rewire-webpack": "1.0.1",
     "tape": "4.5.1",
     "tape-catch": "1.0.4",
-    "webpack": "1.12.14",
+    "webpack": "1.13.0",
     "webpack-dev-server": "1.14.1"
   }
 }
