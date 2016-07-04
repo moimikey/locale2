@@ -48,7 +48,7 @@
     "browserstack-tape-reporter": "1.0.2",
     "enhanced-resolve": "2.2.2",
     "faucet": "0.0.1",
-    "rewire": "2.5.1",
+    "rewire": "2.5.2",
     "rewire-webpack": "1.0.1",
     "tape": "4.6.0",
     "tape-catch": "1.0.6",
