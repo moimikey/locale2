@@ -47,13 +47,13 @@
   "devDependencies": {
     "browserstack-runner": "0.4.4",
     "browserstack-tape-reporter": "1.1.0",
-    "enhanced-resolve": "2.2.2",
+    "enhanced-resolve": "2.3.0",
     "faucet": "0.0.1",
     "rewire": "2.5.2",
     "rewire-webpack": "1.0.1",
-    "tape": "4.6.0",
+    "tape": "4.6.2",
     "tape-catch": "1.0.6",
     "webpack": "1.13.2",
-    "webpack-dev-server": "1.15.1"
+    "webpack-dev-server": "1.16.2"
   }
 }
