@@ -1,5 +1,3 @@
-"use strict"
-
 var formatLocale = require('./utils').formatLocale
 
 function getLocale(locale) {

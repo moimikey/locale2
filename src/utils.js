@@ -1,5 +1,3 @@
-"use strict"
-
 /**
  * Assuming the locale is in the form of
  * langtag-region (en-US)
