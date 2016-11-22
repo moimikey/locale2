@@ -22,8 +22,8 @@ function getLocale(locale) {
   if (!locale && ['LANG', 'LANGUAGE'].some(Object.hasOwnProperty, process.env)) {
     return (process.env.LANG ||
             process.env.LANGUAGE ||
-            Object.create(null)).replace(/[.:].*/, '')
-                                .replace('_', '-')
+            String()).replace(/[.:].*/, '')
+                     .replace('_', '-')
   }
 
   return locale
