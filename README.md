@@ -1,4 +1,6 @@
 # locale2 [![Build Status][travis-image]][travis-url]
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/moimikey/locale2.svg)](https://greenkeeper.io/)
 [![Version][npm-version-image]][npm-version-url] [![License][npm-license-image]][npm-license-url] [![Downloads][npm-downloads-image]][npm-downloads-url] [![Deps][npm-deps-image]][npm-deps-url] [![DevDeps][npm-devdeps-image]][npm-devdeps-url]
 
 Try as hard as possible to detect the client's language tag ("locale") in node or the browser. Browserify and Webpack friendly!
