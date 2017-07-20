@@ -7,7 +7,7 @@ function getLocale(locale) {
     return global.Intl.DateTimeFormat().resolvedOptions && global.Intl.DateTimeFormat().resolvedOptions().locale
   }
 
-  if (global.chrome && typeof global.chrome.app.getDetails === 'function') {
+  if (global.chrome && global.chrome.app && typeof global.chrome.app.getDetails === 'function') {
     return global.chrome.app.getDetails().current_locale
   }
 
