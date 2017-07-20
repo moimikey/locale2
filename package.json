@@ -1,6 +1,6 @@
 {
   "name": "locale2",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Try as hard as possible to detect the client's language tag (\"locale\") in node or the browser. Browserify and Webpack friendly!",
   "main": "index.js",
   "scripts": {
