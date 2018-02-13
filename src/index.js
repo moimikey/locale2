@@ -6,7 +6,7 @@ function getLocale(locale) {
   if (global.chrome && global.chrome.app && typeof global.chrome.app.getDetails === 'function') {
     locale = global.chrome.app.getDetails()
 
-    if (locale) {
+    if (locale && locale.current_locale) {
       return locale.current_locale
     }
   }
