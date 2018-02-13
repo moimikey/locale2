@@ -8,7 +8,11 @@ function getLocale(locale) {
   }
 
   if (global.chrome && global.chrome.app && typeof global.chrome.app.getDetails === 'function') {
-    return global.chrome.app.getDetails().current_locale
+    locale = global.chrome.app.getDetails()
+
+    if (locale) {
+      return locale.current_locale
+    }
   }
 
   locale = (global.clientInformation || global.navigator || Object.create(null)).language ||
