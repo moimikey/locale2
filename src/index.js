@@ -11,11 +11,21 @@ function getLocale(locale) {
     }
   }
 
-  locale = (global.clientInformation || global.navigator || Object.create(null)).language ||
-           (global.navigator &&
-             (global.navigator.userLanguage ||
-             (global.navigator.languages && global.navigator.languages[0]) ||
-             (global.navigator.userAgent && global.navigator.userAgent.match(/;.(\w+\-\w+)/i)[1])))
+  locale = (global.navigator && (
+    (global.navigator.languages && global.navigator.languages[0]) ||
+    global.navigator.language ||
+    global.navigator.userLanguage
+  ))
+
+  if (!locale && global.navigator && global.navigator.userAgent) {
+    locale = global.navigator.userAgent.match(/;.(\w+\-\w+)/i)
+    
+    if (locale) return locale[1]
+  }
+
+  if (!locale) {
+    locale = (global.clientInformation || Object.create(null)).language
+  }
 
   if (!locale) {
     if (global.Intl && typeof global.Intl.DateTimeFormat === 'function') {
