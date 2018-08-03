@@ -1,6 +1,6 @@
 {
   "name": "locale2",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "💪 Try as hard as possible to detect the client's language tag ('locale') in node or the browser. Browserify and Webpack friendly!",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,9 @@
     "lint": "standard src/**/*.js",
     "test:bs:local": "echo 'open http://localhost:8080/webpack-dev-server/test-bs.html' && webpack-dev-server --config ./webpack.config.js",
     "test:bs": "source .credentials &>/dev/null; BROWSERSTACK_USERNAME=$BROWSERSTACK_USERNAME BROWSERSTACK_KEY=$BROWSERSTACK_KEY browserstack-runner --verbose",
-    "test": "tape ./test.js | faucet"
+    "test": "tape ./test.js | faucet",
+    "publish-please": "publish-please",
+    "prepublishOnly": "publish-please guard"
   },
   "repository": {
     "type": "git",
@@ -51,6 +53,7 @@
     "browserstack-tape-reporter": "1.1.0",
     "enhanced-resolve": "^4.0.0-beta.4",
     "faucet": "0.0.1",
+    "publish-please": "^3.2.0",
     "rewire": "^4.0.1",
     "rewire-webpack": "1.0.1",
     "standard": "^11.0.1",
