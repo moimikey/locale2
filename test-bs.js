@@ -1,5 +1,5 @@
-var test    = require('tape')
-var lib     = require('./src')
+var test = require('tape')
+var lib = require('./src')
 var locale2 = lib.locale2
 
 test('locale2 is a string', function (t) {

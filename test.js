@@ -1,7 +1,7 @@
-var test     = require('tape')
-var rewire   = require('rewire')
-var lib      = rewire('./src')
-var locale2  = lib.locale2
+var test = require('tape')
+var rewire = require('rewire')
+var lib = rewire('./src')
+var locale2 = lib.locale2
 
 test('locale2 is', function(t) {
   t.plan(1)
@@ -56,8 +56,8 @@ test('locale2 resolved...', function(T) {
       global: {
         navigator: {
           language: 'en-bb'
-       }
-     }
+        }
+      }
     })(function() {
       t.equal(locale2(), 'en-BB')
       t.end()

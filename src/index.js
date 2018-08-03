@@ -1,11 +1,10 @@
 var formatLocale = require('./utils').formatLocale
 
-function getLocale(locale) {
+function getLocale (locale) {
   if (locale) return locale
 
   if (global.chrome && global.chrome.app && typeof global.chrome.app.getDetails === 'function') {
     locale = global.chrome.app.getDetails()
-
     if (locale && locale.current_locale) {
       return locale.current_locale
     }
@@ -18,8 +17,7 @@ function getLocale(locale) {
   ))
 
   if (!locale && global.navigator && global.navigator.userAgent) {
-    locale = global.navigator.userAgent.match(/;.(\w+\-\w+)/i)
-    
+    locale = global.navigator.userAgent.match(/;.(\w+-\w+)/i)
     if (locale) return locale[1]
   }
 
@@ -31,19 +29,16 @@ function getLocale(locale) {
     if (global.Intl && typeof global.Intl.DateTimeFormat === 'function') {
       locale = global.Intl.DateTimeFormat().resolvedOptions && global.Intl.DateTimeFormat().resolvedOptions().locale
     }
-    
     if (!locale && ['LANG', 'LANGUAGE'].some(Object.hasOwnProperty, process.env)) {
-      return (process.env.LANG ||
-              process.env.LANGUAGE ||
-              String()).replace(/[.:].*/, '')
-                       .replace('_', '-')
+      return (process.env.LANG || process.env.LANGUAGE || String())
+        .replace(/[.:].*/, '')
+        .replace('_', '-')
     }
   }
-
   return locale
 }
 
-var locale2 = function(locale) {
+var locale2 = function (locale) {
   return formatLocale(getLocale(locale))
 }
 

@@ -1,54 +1,21 @@
 {
-  "username": "moimikey",
   "test_path": "test-bs.html",
+  "debug": true,
   "browsers": [
-  {
-   "browser" : "ie",
-   "browser_version" : "9.0",
-   "os" : "Windows",
-   "os_version" : "7"
-  }
-,
-  {
-   "browser" : "ie",
-   "browser_version" : "10.0",
-   "os" : "Windows",
-   "os_version" : "7"
-  }
-,
-  {
-   "browser" : "safari",
-   "browser_version" : "latest",
-   "os" : "OS X",
-   "os_version" : "El Capitan"
-  }
-,
-  {
-   "browser" : "safari",
-   "browser_version" : "latest",
-   "os" : "OS X",
-   "os_version" : "Yosemite"
-  }
-,
-  {
-   "browser" : "firefox",
-   "browser_version" : "latest",
-   "os" : "OS X",
-   "os_version" : "El Capitan"
-  }
-,
-  {
-   "browser" : "opera",
-   "browser_version" : "latest",
-   "os" : "OS X",
-   "os_version" : "Yosemite"
-  }
-,
-  {
-   "browser" : "chrome",
-   "browser_version" : "latest",
-   "os" : "OS X",
-   "os_version" : "Yosemite"
-  }
+    "safari_9_1",
+    "safari_10_1",
+    "safari_latest",
+    "safari_previous",
+    "edge_latest",
+    "edge_previous",
+    "opera_latest",
+    "chrome_previous",
+    "chrome_latest",
+    "firefox_previous",
+    "firefox_latest",
+    "ie_8",
+    "ie_9",
+    "ie_10",
+    "ie_11"
   ]
 }
