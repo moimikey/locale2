@@ -3,13 +3,13 @@ var rewire = require('rewire')
 var lib = rewire('./src')
 var locale2 = lib.locale2
 
-test('locale2 is', function(t) {
+test('locale2 is', function (t) {
   t.plan(1)
   t.ok(locale2())
   t.end()
 })
 
-test('locale2 returns a locale string', function(t) {
+test('locale2 returns a locale string', function (t) {
   t.plan(1)
   lib.__with__({
     global: {
@@ -17,26 +17,26 @@ test('locale2 returns a locale string', function(t) {
         language: 'en-00'
       }
     }
-  })(function() {
+  })(function () {
     t.equal(typeof locale2(), 'string')
     t.end()
   })
 })
 
-test('locale2 returns a forced locale', function(t) {
+test('locale2 returns a forced locale', function (t) {
   t.plan(1)
   t.equal(locale2('en-11'), 'en-11')
   t.end()
 })
 
-test('locale2 can parse a complex locale', function(t) {
+test('locale2 can parse a complex locale', function (t) {
   t.plan(1)
   t.equal(locale2('en-US-u-VA-posix'), 'en-US')
   t.end()
 })
 
-test('locale2 resolved...', function(T) {
-  T.test('...clientInformation.language', function(t) {
+test('locale2 resolved...', function (T) {
+  T.test('...clientInformation.language', function (t) {
     t.plan(1)
     lib.__with__({
       global: {
@@ -44,13 +44,13 @@ test('locale2 resolved...', function(T) {
           language: 'en-AA'
         }
       }
-    })(function() {
+    })(function () {
       t.equal(locale2(), 'en-AA')
       t.end()
     })
   })
 
-  T.test('...navigator.language', function(t) {
+  T.test('...navigator.language', function (t) {
     t.plan(1)
     lib.__with__({
       global: {
@@ -58,13 +58,13 @@ test('locale2 resolved...', function(T) {
           language: 'en-bb'
         }
       }
-    })(function() {
+    })(function () {
       t.equal(locale2(), 'en-BB')
       t.end()
     })
   })
 
-  T.test('...navigator.userLanguage', function(t) {
+  T.test('...navigator.userLanguage', function (t) {
     t.plan(1)
     lib.__with__({
       global: {
@@ -78,7 +78,7 @@ test('locale2 resolved...', function(T) {
     })
   })
 
-  T.test('...navigator.languages', function(t) {
+  T.test('...navigator.languages', function (t) {
     t.plan(1)
     lib.__with__({
       global: {
@@ -92,7 +92,7 @@ test('locale2 resolved...', function(T) {
     })
   })
 
-  T.test('...navigator.userAgent', function(t) {
+  T.test('...navigator.userAgent', function (t) {
     t.plan(1)
     lib.__with__({
       global: {
@@ -106,7 +106,7 @@ test('locale2 resolved...', function(T) {
     })
   })
 
-  T.test('...process.env.LANG', function(t) {
+  T.test('...process.env.LANG', function (t) {
     t.plan(1)
     lib.__with__({
       global: {},
@@ -121,7 +121,7 @@ test('locale2 resolved...', function(T) {
     })
   })
 
-  T.test('...process.env.LANGUAGE', function(t) {
+  T.test('...process.env.LANGUAGE', function (t) {
     t.plan(1)
     lib.__with__({
       global: {},
@@ -136,14 +136,14 @@ test('locale2 resolved...', function(T) {
     })
   })
 
-  T.test('...Intl.DateTimeFormat', function(t) {
+  T.test('...Intl.DateTimeFormat', function (t) {
     t.plan(1)
     lib.__with__({
       global: {
         Intl: {
-          DateTimeFormat: function() {
+          DateTimeFormat: function () {
             return {
-              resolvedOptions: function() {
+              resolvedOptions: function () {
                 return {
                   locale: 'en-hh'
                 }
@@ -158,13 +158,13 @@ test('locale2 resolved...', function(T) {
     })
   })
 
-  T.test('...chrome.app', function(t) {
+  T.test('...chrome.app', function (t) {
     t.plan(1)
     lib.__with__({
       global: {
         chrome: {
           app: {
-            getDetails: function() {
+            getDetails: function () {
               return {
                 current_locale: 'en-II'
               }
@@ -174,6 +174,26 @@ test('locale2 resolved...', function(T) {
       }
     })(function () {
       t.equal(locale2(), 'en-II')
+      t.end()
+    })
+  })
+
+  T.test('...chrome.runtime', function (t) {
+    t.plan(1)
+    lib.__with__({
+      global: {
+        chrome: {
+          runtime: {
+            getManifest: function () {
+              return {
+                current_locale: 'en-JJ'
+              }
+            }
+          }
+        }
+      }
+    })(function () {
+      t.equal(locale2(), 'en-JJ')
       t.end()
     })
   })

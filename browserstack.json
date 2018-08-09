@@ -2,6 +2,8 @@
   "test_path": "test-bs.html",
   "debug": true,
   "browsers": [
+    "chrome_previous",
+    "chrome_latest",
     "safari_9_1",
     "safari_10_1",
     "safari_latest",
@@ -9,8 +11,6 @@
     "edge_latest",
     "edge_previous",
     "opera_latest",
-    "chrome_previous",
-    "chrome_latest",
     "firefox_previous",
     "firefox_latest",
     "ie_8",

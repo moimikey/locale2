@@ -3,8 +3,8 @@ var formatLocale = require('./utils').formatLocale
 function getLocale (locale) {
   if (locale) return locale
 
-  if (global.chrome && global.chrome.app && typeof global.chrome.app.getDetails === 'function') {
-    locale = global.chrome.app.getDetails()
+  if (global.chrome && global.chrome.runtime && typeof global.chrome.runtime.getManifest === 'function') {
+    locale = global.chrome.runtime.getManifest()
     if (locale && locale.current_locale) {
       return locale.current_locale
     }
