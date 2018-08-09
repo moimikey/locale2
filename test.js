@@ -158,13 +158,13 @@ test('locale2 resolved...', function (T) {
     })
   })
 
-  T.test('...chrome.app', function (t) {
+  T.test('...chrome.runtime', function (t) {
     t.plan(1)
     lib.__with__({
       global: {
         chrome: {
-          app: {
-            getDetails: function () {
+          runtime: {
+            getManifest: function () {
               return {
                 current_locale: 'en-II'
               }
@@ -174,26 +174,6 @@ test('locale2 resolved...', function (T) {
       }
     })(function () {
       t.equal(locale2(), 'en-II')
-      t.end()
-    })
-  })
-
-  T.test('...chrome.runtime', function (t) {
-    t.plan(1)
-    lib.__with__({
-      global: {
-        chrome: {
-          runtime: {
-            getManifest: function () {
-              return {
-                current_locale: 'en-JJ'
-              }
-            }
-          }
-        }
-      }
-    })(function () {
-      t.equal(locale2(), 'en-JJ')
       t.end()
     })
   })
