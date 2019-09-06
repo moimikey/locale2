@@ -9,15 +9,12 @@
     "lint": "standard src/**/*.js",
     "test:bs:local": "echo 'open http://localhost:8080/webpack-dev-server/test-bs.html' && webpack-dev-server --config ./webpack.config.js",
     "test:bs": "source .credentials &>/dev/null; BROWSERSTACK_USERNAME=$BROWSERSTACK_USERNAME BROWSERSTACK_KEY=$BROWSERSTACK_KEY browserstack-runner --verbose",
-    "test": "tape ./test.js | faucet",
-    "publish-please": "publish-please",
-    "prepublishOnly": "publish-please guard"
+    "test": "tape ./test.js | faucet"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/moimikey/locale2.git"
   },
-  "reveal": true,
   "keywords": [
     "locale",
     "country",
@@ -49,19 +46,18 @@
   },
   "homepage": "https://github.com/moimikey/locale2",
   "devDependencies": {
-    "browserstack-capabilities": "^0.4.0",
-    "browserstack-runner": "^0.7.0",
+    "browserstack-capabilities": "^0.7.0",
+    "browserstack-runner": "^0.9.0",
     "browserstack-tape-reporter": "1.1.0",
-    "enhanced-resolve": "^4.0.0-beta.4",
+    "enhanced-resolve": "^4.1.0",
     "faucet": "0.0.1",
-    "publish-please": "^3.2.0",
     "rewire": "^4.0.1",
     "rewire-webpack": "1.0.1",
-    "standard": "^11.0.1",
-    "tape": "^4.8.0",
+    "standard": "^14.1.0",
+    "tape": "^4.11.0",
     "tape-catch": "1.0.6",
-    "webpack": "^4.16.4",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0"
   }
 }
