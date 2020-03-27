@@ -50,7 +50,7 @@
   "homepage": "https://github.com/moimikey/locale2",
   "devDependencies": {
     "browserstack-capabilities": "^0.4.0",
-    "browserstack-runner": "^0.7.0",
+    "browserstack-runner": "^0.9.1",
     "browserstack-tape-reporter": "1.1.0",
     "enhanced-resolve": "^4.0.0-beta.4",
     "faucet": "0.0.1",
