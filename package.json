@@ -54,7 +54,7 @@
     "browserstack-tape-reporter": "1.1.0",
     "enhanced-resolve": "^4.0.0-beta.4",
     "faucet": "0.0.1",
-    "publish-please": "^3.2.0",
+    "publish-please": "^5.5.1",
     "rewire": "^4.0.1",
     "rewire-webpack": "1.0.1",
     "standard": "^11.0.1",
