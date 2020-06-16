@@ -55,7 +55,7 @@
     "enhanced-resolve": "^4.0.0-beta.4",
     "faucet": "0.0.1",
     "publish-please": "^3.2.0",
-    "rewire": "^4.0.1",
+    "rewire": "^5.0.0",
     "rewire-webpack": "1.0.1",
     "standard": "^11.0.1",
     "tape": "^4.8.0",
