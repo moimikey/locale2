@@ -57,7 +57,7 @@
     "publish-please": "^3.2.0",
     "rewire": "^5.0.0",
     "rewire-webpack": "1.0.1",
-    "standard": "^11.0.1",
+    "standard": "^14.3.4",
     "tape": "^4.8.0",
     "tape-catch": "1.0.6",
     "webpack": "^4.16.4",
