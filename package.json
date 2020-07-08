@@ -17,7 +17,6 @@
     "type": "git",
     "url": "https://github.com/moimikey/locale2.git"
   },
-  "reveal": true,
   "keywords": [
     "locale",
     "country",
@@ -49,19 +48,19 @@
   },
   "homepage": "https://github.com/moimikey/locale2",
   "devDependencies": {
-    "browserstack-capabilities": "^0.4.0",
-    "browserstack-runner": "^0.7.0",
+    "browserstack-capabilities": "^0.7.0",
+    "browserstack-runner": "^0.9.2",
     "browserstack-tape-reporter": "1.1.0",
-    "enhanced-resolve": "^4.0.0-beta.4",
+    "enhanced-resolve": "^4.2.0",
     "faucet": "0.0.1",
-    "publish-please": "^3.2.0",
+    "publish-please": "^5.5.1",
     "rewire": "^5.0.0",
     "rewire-webpack": "1.0.1",
     "standard": "^14.3.4",
-    "tape": "^4.8.0",
+    "tape": "^5.0.1",
     "tape-catch": "1.0.6",
-    "webpack": "^4.16.4",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }
