@@ -51,7 +51,7 @@
     "browserstack-capabilities": "^0.7.0",
     "browserstack-runner": "^0.9.2",
     "browserstack-tape-reporter": "1.1.0",
-    "enhanced-resolve": "^4.2.0",
+    "enhanced-resolve": "^5.4.0",
     "faucet": "0.0.1",
     "publish-please": "^5.5.1",
     "rewire": "^5.0.0",
